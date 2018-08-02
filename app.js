@@ -25,6 +25,9 @@ document.getElementById('w-change-btn').addEventListener('click', function(e){
     //Get Weather again
     getWeather ()
     
+    //Set location in LS
+    storage.setLocationData(city, countryCode); 
+
     //Close Model
     $('#locModal').modal('hide');
 })

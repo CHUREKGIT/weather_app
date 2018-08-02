@@ -8,7 +8,7 @@ class Weather {
 
     //Fetch weather app
     async getWeather() {
-        const response = await fetch (`http://api.openweathermap.org/data/2.5/weather?q=${this.city},${this.countryCode}&APPID=${this.apiKey}`)
+        const response = await fetch (`https://api.openweathermap.org/data/2.5/weather?q=${this.city},${this.countryCode}&APPID=${this.apiKey}`)
 
         const responseData = await response.json();
 
@@ -19,13 +19,7 @@ class Weather {
     changeLocation(city, countryCode){
         this.city = city;
         this.countryCode = countryCode;
-        document.getElementById('w-change-btn').addEventListener('click', function(e){
-
-            city = document.getElementById('city').textContent;
-            countryCode = docuemnt.getElementById('state').textContent;
-
-            return city, countryCode;
-        })
+    
     }
 }
 
